@@ -95,6 +95,10 @@ font-family: Asap , sans-serif;
 }
 
 .rules {
+    background: #1a8b88;
+    margin: 0 auto;
+    padding-top: 10px;
+    max-width: 900px;
     color: white;
     font-family: Asap,sans-serif;
     text-align: center;
@@ -104,9 +108,30 @@ font-family: Asap , sans-serif;
     font-size: 50px;
 }
 .rules > p {
-    font-size: 30px;
+    margin: 10px;
+    font-size: 28px;
 }
 .rules > li {
+    margin: 5px;
     text-align: center;
+    font-size: 20px;
+}
+
+.hint {
+        background: #1a8b88;
+        margin: 0 auto;
+        padding-top: 10px;
+        max-width: 900px;
+        color: white;
+        font-family: Asap,sans-serif;
+        text-align: center;
+}
+.hint > li {
+    margin: 10px;
+    text-align: center;
+    font-size: 20px;
+}
+.hint > p {
+    margin: 10px;
     font-size: 20px;
 }
