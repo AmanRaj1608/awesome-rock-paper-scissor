@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="styles.css">
+    <title>Rock Paper Scissors</title>
+</head>
+
+<body>
+    <header> <h1>Rock paper Scissors</h1></header>
+
+    <div class="score-board">
+        <div id="user-label" class="badge">user</div>
+        <div id="computer-label" class="badge">comp</div>
+        <span id="user-score">0</span> : <span id="computer-score">0</span>
+    </div><br>
+    <div class="result">
+        <p>Paper covers rock. You Win!</p><br>
+    </div>
+
+    <div class="choices">
+
+        <div class="choice" id="r">
+            <img src="rock.png" alt="" height="80" width="80">
+        </div>
+        <div class="choice" id="p">
+            <img src="paper.png" alt="" height="80" width="80">
+        </div>
+        <div class="choice" id="s">
+            <img src="scissor.png" alt="" height="80" width="80">
+        </div>
+    </div>
+
+    <p id="action-message">Make Your Choice.</p><br><br><br>
+
+    <div class="rules">
+        <h1>How To Play</h1>
+        <p>The rules are very simple and probably you remember them from your childhood:</p>
+            <li>If you choose Rock, you will win against Scissors but lose against Paper.</li>
+            <li>If you choose Scissors, you will win against Paper but lose against Rock.</li>
+            <li>If you choose Paper, you will win against Rock but lose against Scissors.</li>
+    </div>
+    <script src="app.js" charset="utf-8"></script>
+</body>
+
+</html> 
