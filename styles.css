@@ -94,11 +94,17 @@ font-family: Asap , sans-serif;
     margin-top: 20px;
 }
 
+.scroll{
+    font-family: Asap,sans-serif;
+    text-align: center;
+    font-size: 50px;
+}
+
 .rules {
     background: #1a8b88;
     margin: 0 auto;
     padding-top: 10px;
-    max-width: 900px;
+    max-width: 1000px;
     color: white;
     font-family: Asap,sans-serif;
     text-align: center;
@@ -121,7 +127,7 @@ font-family: Asap , sans-serif;
         background: #1a8b88;
         margin: 0 auto;
         padding-top: 10px;
-        max-width: 900px;
+        max-width: 1000px;
         color: white;
         font-family: Asap,sans-serif;
         text-align: center;
