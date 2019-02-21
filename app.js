@@ -39,7 +39,7 @@ function Lose(userInput , compChoice) {
     userScore_span.innerHTML = userScore;
     computerScore_span.innerHTML = computerScore;
     if( userInput ==='r' && compChoice ==='p'){
-        result_p.innerHTML =  `Computer chosed Paper 📜 . You Lost ❌`;
+        result_p.innerHTML =  "Computer chosed Paper 📜 . You Lost ❌";
     }
     else if( userInput ==='p' && compChoice ==='s'){
         result_p.innerHTML =  `Computer chosed Scissors ✂ . You Lost ❌`;
