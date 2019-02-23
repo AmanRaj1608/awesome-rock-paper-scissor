@@ -85,6 +85,32 @@ font-family: Asap , sans-serif;
     background: #24272E;
 }
 
+.win:hover {
+    cursor: auto;
+    transition: all 0.3s ease;
+    background: #4dcc4d;
+    box-shadow: 0 0 10px #31b43a;
+}
+
+.lose:hover {
+    transition: all 0.3s ease;
+    background: #fc121b;
+    box-shadow: 0 0 10px #d01115;
+}
+
+.win:hover {
+    cursor: auto;
+    transition: all 0.3s ease;
+    background: #4dcc4d;
+    box-shadow: 0 0 10px #31b43a;
+}
+
+.draw:hover {
+    transition: all 0.3s ease;
+    background: #464647;
+    box-shadow: 0 0 10px #25292b;
+}
+
 #action-message {
     text-align: center;
     color: white;

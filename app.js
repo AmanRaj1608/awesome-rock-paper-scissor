@@ -27,11 +27,12 @@ function win(userInput , compChoice) {
         result_p.innerHTML =  `Computer chosed Scissors. You Win 🎊✔🎉`;
     }
     else if( userInput ==='r' && compChoice ==='r'){
-        result_p.innerHTML =  `Computer chosed Rock. You Win ✔🎊🎉`;
+        result_p.innerHTML =  `Computer chosed Rock. You Win 🎊✔🎉`;
     }
     else if( userInput ==='s' && compChoice ==='p'){
-        result_p.innerHTML =  `Computer chosed Paper. You Win ✔🎊🎉`;
+        result_p.innerHTML =  `Computer chosed Paper. You Win 🎊✔🎉`;
     }
+    document.getElementById.
 }
 
 function Lose(userInput , compChoice) {
