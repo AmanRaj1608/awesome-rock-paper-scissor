@@ -82,33 +82,7 @@ font-family: Asap , sans-serif;
 
 .choice:hover {
     cursor: pointer;
-    background: #24272E;
-}
-
-.win:hover {
-    cursor: auto;
-    transition: all 0.3s ease;
-    background: #4dcc4d;
-    box-shadow: 0 0 10px #31b43a;
-}
-
-.lose:hover {
-    transition: all 0.3s ease;
-    background: #fc121b;
-    box-shadow: 0 0 10px #d01115;
-}
-
-.win:hover {
-    cursor: auto;
-    transition: all 0.3s ease;
-    background: #4dcc4d;
-    box-shadow: 0 0 10px #31b43a;
-}
-
-.draw:hover {
-    transition: all 0.3s ease;
-    background: #464647;
-    box-shadow: 0 0 10px #25292b;
+    background: rgba(36, 39, 46, 0.534);
 }
 
 #action-message {
@@ -166,4 +140,24 @@ font-family: Asap , sans-serif;
 .hint > p {
     margin: 10px;
     font-size: 20px;
+}
+
+
+.win:hover {
+    background: #4dcc4d;
+    border: 4px solid #4dcc7d;
+    box-shadow: 0 0 10px #31b43a;
+}
+
+.lose:hover {
+    background: #fc121b;
+    border: 4px solid #d01115
+    box-shadow: 0 0 10px #d01115;
+}
+
+
+.draw:hover {
+    background: #464647;
+    border: 4px solid #25292b;
+    box-shadow: 0 0 10px #25292b;
 }

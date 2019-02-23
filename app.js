@@ -9,8 +9,8 @@ const paper_div = document.getElementById("p");
 const scissors_div = document.getElementById("s");
 
 function computerChoice() {
-    const choices = ['r' , 'p' , 's'];
-    return choices[Math.floor( Math.random() * 3 )];
+    const choices = ['r', 'p', 's'];
+    return choices[Math.floor(Math.random() * 3)];
 }
 
 function convertToWorld(letter) {
@@ -19,76 +19,80 @@ function convertToWorld(letter) {
     else return "Scissors";
 }
 
-function win(userInput , compChoice) {
+function win(userInput, compChoice) {
     userScore++;
     userScore_span.innerHTML = userScore;
     computerScore_span.innerHTML = computerScore;
-    if( userInput ==='r' && compChoice ==='s'){
-        result_p.innerHTML =  `Computer chosed Scissors. You Win 🎊✔🎉`;
+    if (userInput === 'r' && compChoice === 's') {
+        result_p.innerHTML = `Computer chosed Scissors. You Win 🎊✔🎉`;
     }
-    else if( userInput ==='r' && compChoice ==='r'){
-        result_p.innerHTML =  `Computer chosed Rock. You Win 🎊✔🎉`;
+    else if (userInput === 'p' && compChoice === 'r') {
+        result_p.innerHTML = `Computer chosed Rock. You Win 🎊✔🎉`;
     }
-    else if( userInput ==='s' && compChoice ==='p'){
-        result_p.innerHTML =  `Computer chosed Paper. You Win 🎊✔🎉`;
+    else if (userInput === 's' && compChoice === 'p') {
+        result_p.innerHTML = `Computer chosed Paper. You Win 🎊✔🎉`;
     }
-    document.getElementById.
+    document.getElementById(userInput).classList.add('win');
+    setTimeout(function () { document.getElementById(userInput).classList.remove('win'); }, 400);
 }
 
-function Lose(userInput , compChoice) {
+function Lose(userInput, compChoice) {
     computerScore++;
     userScore_span.innerHTML = userScore;
     computerScore_span.innerHTML = computerScore;
-    if( userInput ==='r' && compChoice ==='p'){
-        result_p.innerHTML =  "Computer chosed Paper 📜 . You Lost ❌";
+    if (userInput === 'r' && compChoice === 'p') {
+        result_p.innerHTML = "Computer chosed Paper 📜 . You Lost ❌";
     }
-    else if( userInput ==='p' && compChoice ==='s'){
-        result_p.innerHTML =  `Computer chosed Scissors ✂ . You Lost ❌`;
+    else if (userInput === 'p' && compChoice === 's') {
+        result_p.innerHTML = `Computer chosed Scissors ✂ . You Lost ❌`;
     }
-    else if( userInput ==='s' && compChoice ==='r'){
-        result_p.innerHTML =  `Computer chosed Rock ⬛ . You Lost ❌`;
+    else if (userInput === 's' && compChoice === 'r') {
+        result_p.innerHTML = `Computer chosed Rock ⬛ . You Lost ❌`;
     }
+    document.getElementById(userInput).classList.add('lose');
 }
 
-function Draw(userInput , compChoice) {
+function Draw(userInput, compChoice) {
     userScore_span.innerHTML = userScore;
     computerScore_span.innerHTML = computerScore;
-    if( userInput ==='r' && compChoice ==='r'){
-        result_p.innerHTML =  `Computer chosed Rock ⬛ . It's a tie.`;
+    if (userInput === 'r' && compChoice === 'r') {
+        result_p.innerHTML = `Computer chosed Rock ⬛ . It's a tie.`;
     }
-    else if( userInput ==='p' && compChoice ==='p'){
-        result_p.innerHTML =  `Computer chosed Paper 📜 . It's a tie.`;
+    else if (userInput === 'p' && compChoice === 'p') {
+        result_p.innerHTML = `Computer chosed Paper 📜 . It's a tie.`;
     }
-    else if( userInput ==='s' && compChoice ==='s'){
-        result_p.innerHTML =  `Computer chosed Scissors ✂ . It's a tie.`;
+    else if (userInput === 's' && compChoice === 's') {
+        result_p.innerHTML = `Computer chosed Scissors ✂ . It's a tie.`;
     }
+    document.getElementById(userInput).classList.add(draw);
+    setTimeout(function () { document.getElementById(userInput).classList.remove(draw); }, 1000);
 }
 
 function game(userInput) {
     const compChoice = computerChoice();
     const UserChoice = userInput + compChoice;
-    if( UserChoice === "rs" || UserChoice === "pr" || UserChoice === "sp" ){
-        win(userInput , compChoice);
+    if (UserChoice === "rs" || UserChoice === "pr" || UserChoice === "sp") {
+        win(userInput, compChoice);
         console.log("Win");
     }
-    else if( UserChoice === "rp" || UserChoice === "ps" || UserChoice === "sr" ){
-        Lose(userInput , compChoice);
+    else if (UserChoice === "rp" || UserChoice === "ps" || UserChoice === "sr") {
+        Lose(userInput, compChoice);
         console.log("Lose");
     }
-    else if( UserChoice === "rr" || UserChoice === "pp" || UserChoice === "ss" ){
-        Draw(userInput , compChoice);
+    else if (UserChoice === "rr" || UserChoice === "pp" || UserChoice === "ss") {
+        Draw(userInput, compChoice);
         console.log("Draw");
     }
 }
 
 function main() {
-    rock_div.addEventListener('click', function(){
+    rock_div.addEventListener('click', function () {
         game('r');
     })
-    paper_div.addEventListener('click', function(){
+    paper_div.addEventListener('click', function () {
         game('p');
     })
-    scissors_div.addEventListener('click', function(){
+    scissors_div.addEventListener('click', function () {
         game('s');
     })
 }
