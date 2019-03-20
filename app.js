@@ -17,7 +17,7 @@ function computerChoice() {
     return choices[Math.floor(Math.random() * 3)];
 }
 
-// Here I have defined 3 function to for win , luse , draw
+// Here I have defined 3 function to for win , lose , draw
 
 function win(userInput, compChoice) {
     userScore++;
